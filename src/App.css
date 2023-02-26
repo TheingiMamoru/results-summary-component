@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+*{
+  font-family: 'Hanken Grotesk', sans-serif;
+}
+
+.main{
+  height: 100vh;
+  
+}
+
+.card{
+  width: 740px;
+}
+
+p{
+  font-size: 18px;
+}
+
+.txt-primary{
+  color: white;
+}
+
+.txt-secondary{
+  color: rgb(255, 255, 255,0.7);
+}
+
+.score{
+  width: 200px;
+  height: 200px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  background: rgb(78,33,202);
+  background: linear-gradient(180deg, rgba(78,33,202,1) 55%, rgba(36,33,202,1) 86%);
+
+}
+.score h3{
+  font-size: 60px;
+
+}
+.card1{
+  background: rgb(120,87,255);
+  background: linear-gradient(180deg, rgba(120,87,255,1) 15%, rgba(46,43,233,1) 88%);
+  padding: 50px;
+  /* margin: 5px; */
+
+}
+
+.bg{
+  white:#ffffff;
+  pale_blue:#ebf1ff;
+  light_lavender:#c8c7ff;
+  Dark_gray_blue:#303b5a;
+}
+
+.txt-red{
+  color: #ff5757;
+}
+
+.txt-yellow{
+  color: #ffb01f;
+}
+
+.txt-green{
+  color: #00bd91;
+}
+
+.txt-blue{
+  color: #1125d4;
+}
+
+.txt-dark-gray{
+  color: #303b5a;
+}
+
+.bg-light-red{
+  background-color: #ff575720;
+}
+.bg-light-yellow{
+  background-color: #ffb01f20;
+}
+
+.bg-light-green{
+  background-color: #00bd9120;
+}
+
+.bg-light-lavender{
+  background-color: #c8c7ff70;
+}
+
+.bg-dark-gray{
+  background-color: #303b5a;
+}
+
+.main-btn:hover{
+  background: rgb(120,87,255);
+  background: linear-gradient(180deg, rgba(120,87,255,1) 15%, rgba(46,43,233,1) 88%);
+  transition: 0.5s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
