@@ -88,7 +88,6 @@ p{
 .main-btn:hover{
   background: rgb(120,87,255);
   background: linear-gradient(180deg, rgba(120,87,255,1) 15%, rgba(46,43,233,1) 88%);
-  transition: 0.5s;
 }
 
 
