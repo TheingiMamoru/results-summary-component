@@ -8,7 +8,7 @@ const App = () => {
   const [results, setResults] = useState([])
 
   const getResults = async() => {
-    const {data} = await axios.get('http://localhost:3000/results')
+    const {data} = await axios.get('https://results-summary-api-ashen.vercel.app/results')
     setResults(data)
     // console.log(data);
   }
