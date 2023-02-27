@@ -7,15 +7,14 @@ This is a solution to the [Results summary component challenge on Frontend Mento
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
+- [Author](#TheingiMamoru)
+
 
 **Note: Delete this note and update the table of contents based on what sections you keep.**
 
@@ -41,22 +40,20 @@ Users should be able to:
 - CSS custom properties
 - Flexbox
 - CSS Grid
-- Mobile-first workflow
+- Bootstrap
 - [React](https://reactjs.org/) - JS library
-
+- axios
+- Json server
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+I would like to focus about tailwind-css , JavaScript and React on more projects to be smooth both of frontend and backend developemnts.
 
 ### Useful resources
 
-- [Example resource 1](https://www.bootstrap.com) - This helped me for styling . I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.vitejs.dev) - This is an amazing article which helped me finally understand to create an app easily.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Bootstrap](https://getbootstrap.com) - This helped me for styling . I really liked this pattern and will use it going forward.
+- [CSS-Gradient](https://cssgradient.io/) - This also helped me for styling. It is easy to customize the color of the template.
+- [ViteJs](https://www.vitejs.dev) - This is an amazing website which helped me finally understand to create an app easily.
 
 ## Author
 

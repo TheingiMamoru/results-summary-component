@@ -1,9 +1,33 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
 import { ReactSVG } from 'react-svg'
+import axios from 'axios'
 
 const App = () => {
+  const [results, setResults] = useState([])
+
+  const getResults = async() => {
+    const {data} = await axios.get('http://localhost:3000/results')
+    setResults(data)
+    // console.log(data);
+  }
+  // console.log(results);
+
+  useEffect(()=> {
+    getResults()
+  },[])
+
+  //To Calculate Average Result
+  const totalResult = results?.reduce((pre, cur) => {
+    return pre + cur.score
+  },0)
+  console.log(totalResult);
+
+  const avgResult = totalResult / results?.length
+  console.log(avgResult);
+  
+
   return (
     <div className='container-fluid'>
       <div className='main d-flex align-items-center justify-content-center'>
@@ -13,7 +37,7 @@ const App = () => {
               <div className="card-body">
                 <h3 className="card-title txt-secondary">Your Result</h3>
                 <div className='score mx-auto d-flex flex-column align-items-center justify-content-center border-0 rounded-circle shadow-lg  '>
-                  <h3 className="card-text fw-bold txt-primary ">76</h3>
+                  <h3 className="card-text fw-bold txt-primary ">{avgResult?.toFixed(0)}</h3>
                   <p className="card-text txt-secondary">of 100</p>
                 </div>
                 <div className=''>
@@ -30,42 +54,19 @@ const App = () => {
               <div className="card-body">
                 <h3 className="card-title my-3 fw-bold">Summary</h3>
                 <ul className="list-group list-group-flush d-flex flex-column gap-4 my-5">
-                  <li className="list-group-item d-flex justify-content-between align-items-center border rounded-3 bg-light-red">
-                    <div className='d-flex align-items-center gap-1'>
-                      <ReactSVG src="./src/assets/images/icon-reaction.svg" />
-                      <p className='text-center m-0 txt-red'>Reaction</p>
-                    </div>
-                    <div>
-                      <span className='fw-bold'>80 </span> <span className='txt-dark-gray'> / 100</span>  
-                    </div>
-                  </li>
-                  <li className="list-group-item d-flex justify-content-between align-items-center border rounded-3 bg-light-yellow">
-                    <div className='d-flex align-items-center gap-1'>
-                      <ReactSVG src="./src/assets/images/icon-memory.svg" />
-                      <p className='text-center m-0 txt-yellow'>Memory</p>
-                    </div>
-                    <div>
-                      <span className='fw-bold'>92 </span> <span className='txt-dark-gray'> / 100</span>  
-                    </div>
-                  </li>
-                  <li className="list-group-item d-flex justify-content-between align-items-center border rounded-3 bg-light-green">
-                    <div className='d-flex align-items-center gap-1'>
-                      <ReactSVG src="./src/assets/images/icon-verbal.svg" />
-                      <p className='text-center m-0 txt-green'>Verbal</p>
-                    </div>
-                    <div>
-                      <span className='fw-bold'>61 </span> <span className='txt-dark-gray'> / 100</span>  
-                    </div>
-                  </li>
-                  <li className="list-group-item d-flex justify-content-between align-items-center border rounded-3 bg-light-lavender">
-                    <div className='d-flex align-items-center gap-1'>
-                      <ReactSVG src="./src/assets/images/icon-visual.svg" />
-                      <p className='text-center m-0 txt-blue'>Visual</p>
-                    </div>
-                    <div>
-                      <span className='fw-bold'>72 </span> <span className='txt-dark-gray'> / 100</span>  
-                    </div>
-                  </li>
+                  {
+                    results?.map(result => (
+                      <li key={result?.id} className={`list-group-item d-flex justify-content-between align-items-center border rounded-3 ${result?.bgColor}`}>
+                        <div className='d-flex align-items-center gap-1'>
+                          <ReactSVG src={`${result?.icon}`} />
+                          <p className={`text-center m-0 ${result?.textColor}`}>{result?.category}</p>
+                        </div>
+                        <div>
+                          <span className='fw-bold'>{result?.score } </span> <span className='txt-dark-gray'> / 100</span>  
+                        </div>
+                      </li>
+                    ))
+                  }
                 </ul>
                 <div className='d-grid '>
                   <button className='main-btn bg-dark-gray border-0 fw-bold p-3 txt-primary rounded-5'>Continue</button>
