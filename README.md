@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [FrontendMentor](https://www.frontendmentor.io/solutions/bootstrap-vitejs-axios-json-server-and-reactjs-x0oSdwlo13)
 - Live Site URL: [Vercel](https://results-summary-component-vert.vercel.app/)
 
 ## My process
