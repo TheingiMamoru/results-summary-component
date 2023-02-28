@@ -37,11 +37,11 @@ const App = () => {
               <div className="card-body">
                 <h1 className="card-title txt-secondary h3">Your Result</h1>
                 <div className='score mx-auto d-flex flex-column align-items-center justify-content-center border-0 rounded-circle shadow-lg  '>
-                  <h3 className="card-text fw-bold txt-primary ">{avgResult?.toFixed(0)}</h3>
+                  <h2 className="card-text fw-bold txt-primary h3 ">{avgResult?.toFixed(0)}</h2>
                   <p className="card-text txt-secondary">of 100</p>
                 </div>
                 <div className=''>
-                  <h3 className="card-title txt-primary">Great</h3>
+                  <h2 className="card-title txt-primary h3">Great</h2>
                   <p className="card-text">
                     <small className="txt-primary ">
                       You score higher than 65% of the people who have taken these tests.
