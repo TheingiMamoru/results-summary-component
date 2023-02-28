@@ -35,7 +35,7 @@ const App = () => {
           <div className="row g-0">
             <div className="card1 col-sm-6 text-center rounded-5 ">
               <div className="card-body">
-                <h3 className="card-title txt-secondary">Your Result</h3>
+                <h1 className="card-title txt-secondary h3">Your Result</h1>
                 <div className='score mx-auto d-flex flex-column align-items-center justify-content-center border-0 rounded-circle shadow-lg  '>
                   <h3 className="card-text fw-bold txt-primary ">{avgResult?.toFixed(0)}</h3>
                   <p className="card-text txt-secondary">of 100</p>
@@ -52,7 +52,7 @@ const App = () => {
             </div>
             <div className=" card2 col-sm-6 p-2">
               <div className="card-body">
-                <h3 className="card-title my-3 fw-bold">Summary</h3>
+                <h1 className="card-title my-3 fw-bold h3">Summary</h1>
                 <ul className="list-group list-group-flush d-flex flex-column gap-4 my-5">
                   {
                     results?.map(result => (
